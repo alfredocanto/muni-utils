@@ -1,0 +1,22 @@
+{
+  "name": "@muni/utils",
+  "version": "1.0.0",
+  "description": "Paquete de utils para proyectos municipales.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfredocanto/sn-muni-utils.git"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "author": "alfredo canto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alfredocanto/sn-muni-utils/issues"
+  },
+  "homepage": "https://github.com/alfredocanto/sn-muni-utils#readme"
+}
