@@ -1,5 +1,5 @@
 {
-  "name": "@muni/utils",
+  "name": "muni-utils",
   "version": "1.0.0",
   "description": "Paquete de utils para proyectos municipales.",
   "main": "index.js",
