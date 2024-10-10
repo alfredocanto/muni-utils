@@ -1,5 +1,15 @@
 ### Utils
 Paquete de funciones utilitarias comunes a muchos proyectos.
+  
+- [validateCUIT()](#validatecuitstring-guiones)
+- [validateEmail()](#validateemailstring)
+- [formatFecha()](#formatfechadate-withhours)
+- [formatMoney()](#formatmoneyany)
+- [getWeekDay()](#getweekdaydate)
+- [capitalize()](#capitalizestring)
+- [randomNumber()](#randomnumbermin-max)
+- [sleep()](#sleepduration)
+- [groupBy()](#groupbyarray-key)
 
 ## validateCUIT(``string``, ``guiones``)  
 ```javascript
