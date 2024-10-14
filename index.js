@@ -172,3 +172,49 @@ exports.groupBy = (array, key) => {
         return { ...group, [keyValue]: [...(group[keyValue] ?? []), element] };
     }, {});
 }
+
+/**
+ * Limita la frecuencia de ejecución de una función.
+* Comunmente se usa para limintar llamadas a la API
+ * @param {Function} func 
+ * @param {number} wait 
+ * @returns {Function}
+ * @example 
+ * const debounced = debounce(() => console.log('Hello World'), 1000);
+ * debounced();
+ */
+exports.debounce = (func, wait) => {
+    let timeout;
+    return function(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
+/**
+ * Limita la frecuencia de ejecución de una función, garantizando la ejecución periódica.
+ * @param {Function} func 
+ * @param {number} limit 
+ * @returns {Function}
+ * @example
+ * const throttled = throttle(() => console.log('Hello World'), 1000);
+ * throttled();
+ */
+exports.throttle = (func, limit) => {
+    let lastFunc;
+    let lastRan;
+    return function(...args) {
+        if (!lastRan) {
+            func.apply(this, args);
+            lastRan = Date.now();
+        } else {
+            clearTimeout(lastFunc);
+            lastFunc = setTimeout(() => {
+                if ((Date.now() - lastRan) >= limit) {
+                    func.apply(this, args);
+                    lastRan = Date.now();
+                }
+            }, limit - (Date.now() - lastRan));
+        }
+    };
+}

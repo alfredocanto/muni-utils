@@ -1,6 +1,7 @@
 ### Utils
 Paquete de funciones utilitarias comunes a muchos proyectos.
   
+- [Instalación](#instalación)
 - [validateCUIT()](#validatecuitstring-guiones)
 - [validateEmail()](#validateemailstring)
 - [formatFecha()](#formatfechadate-withhours)
@@ -10,6 +11,17 @@ Paquete de funciones utilitarias comunes a muchos proyectos.
 - [randomNumber()](#randomnumbermin-max)
 - [sleep()](#sleepduration)
 - [groupBy()](#groupbyarray-key)
+
+## Instalación
+```bash
+npm i muni-utils
+```
+## Uso
+```javascript
+const utils = require('muni-utils')
+
+let test =  utils.validateCUIT('20456178556') 
+```
 
 ## validateCUIT(``string``, ``guiones``)  
 ```javascript
